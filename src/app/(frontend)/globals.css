@@ -43,8 +43,47 @@
   --breakpoint-lg: 64rem;
   --breakpoint-xl: 80rem;
   --breakpoint-2xl: 86rem;
-  --font-mono: var(--font-geist-mono);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-prompt);
+
+  /* NutraSoft brand tokens — additive, intentionally not named accent/accent-2
+     to avoid colliding with the shadcn --color-accent already used by
+     ui/button.tsx's outline/ghost hover states across the app. */
+  --color-moss-100: #eff3e3;
+  --color-moss-200: #dce6c4;
+  --color-moss-300: #c3d89c;
+  --color-moss-400: #a5c773;
+  --color-moss-500: #86af50;
+  --color-moss-600: #6b9139;
+  --color-moss-700: #517029;
+  --color-moss-800: #38501c;
+  --color-moss-900: #223010;
+
+  --color-forest-100: #e7f0e9;
+  --color-forest-200: #c7decc;
+  --color-forest-300: #9fc7a8;
+  --color-forest-400: #6fa97d;
+  --color-forest-500: #3f8657;
+  --color-forest-600: #2a6a44;
+  --color-forest-700: #1f4d33;
+  --color-forest-800: #163a26;
+  --color-forest-900: #0f2a1a;
+
+  --color-nutra-bg: #eff3e3;
+  --color-nutra-surface: #dce6c4;
+  --color-nutra-text: #201e1d;
+  --color-nutra-warning: #f1dccf;
+  --color-nutra-warning-text: #6b4423;
+  --color-nutra-warning-icon: #8a5a2e;
+
+  --color-nutra-neutral-100: #f9f4ed;
+  --color-nutra-neutral-200: #efe6d8;
+  --color-nutra-neutral-300: #ded2bd;
+  --color-nutra-neutral-400: #c2b39a;
+  --color-nutra-neutral-500: #a3937a;
+  --color-nutra-neutral-600: #7d6f5a;
+  --color-nutra-neutral-700: #5c5142;
+  --color-nutra-neutral-800: #423a2f;
+  --color-nutra-neutral-900: #2e2b25;
 }
 
 @layer utilities {
