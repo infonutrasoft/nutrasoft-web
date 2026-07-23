@@ -5,6 +5,8 @@ import { cn } from '@/utilities/ui'
 
 type ImagePlaceholderProps = {
   aspect?: '4/3' | '1/1' | '16/9'
+  /** Fill the parent's height instead of using a fixed aspect ratio (for stretched flex rows). */
+  fill?: boolean
   label?: string
   zoomOnHover?: boolean
   className?: string
@@ -19,6 +21,7 @@ const aspectClass = {
 
 export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
   aspect = '4/3',
+  fill,
   label,
   zoomOnHover,
   className,
@@ -27,7 +30,7 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
   <div
     className={cn(
       'relative w-full overflow-hidden rounded-[28px] bg-moss-200',
-      aspectClass[aspect],
+      fill ? 'h-full' : aspectClass[aspect],
       zoomOnHover && 'group',
       className,
     )}

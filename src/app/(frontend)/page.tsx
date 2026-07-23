@@ -128,17 +128,17 @@ export default async function HomePage() {
 
       {/* Shipping */}
       <section className="bg-nutra-surface py-[35.2px]">
-        <div className={cn(sectionContainer, 'flex flex-wrap items-center gap-[26.4px]')}>
-          <div className="min-w-[300px] flex-1 basis-[380px]">
+        <div className={cn(sectionContainer, 'flex flex-wrap items-stretch gap-[26.4px]')}>
+          <div className="min-w-[300px] min-h-[320px] flex-[1.2] basis-[460px]">
             {typeof home.shippingImage === 'object' && home.shippingImage ? (
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[28px]">
+              <div className="relative h-full min-h-[320px] w-full overflow-hidden rounded-[28px]">
                 <Media resource={home.shippingImage} fill imgClassName="object-cover" />
               </div>
             ) : (
-              <ImagePlaceholder aspect="4/3" zoomOnHover label="ภาพรถขนส่ง / การจัดส่งสินค้า" />
+              <ImagePlaceholder fill zoomOnHover label="ภาพรถขนส่ง / การจัดส่งสินค้า" className="min-h-[320px]" />
             )}
           </div>
-          <div className="min-w-[300px] flex-1 basis-[420px] flex flex-col gap-[13.2px]">
+          <div className="min-w-[300px] flex-1 basis-[380px] flex flex-col justify-center gap-[13.2px]">
             <Tag variant="forest" className="self-start">
               บริการจัดส่ง
             </Tag>
