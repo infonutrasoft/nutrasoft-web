@@ -127,7 +127,7 @@ export default async function HomePage() {
       </section>
 
       {/* Shipping */}
-      <section className="bg-nutra-surface py-[35.2px]">
+      <section className="bg-nutra-surface">
         <div className={cn(sectionContainer, 'flex flex-wrap items-stretch gap-[26.4px]')}>
           <div className="min-w-[300px] min-h-[320px] flex-[1.2] basis-[460px]">
             {typeof home.shippingImage === 'object' && home.shippingImage ? (
@@ -138,7 +138,7 @@ export default async function HomePage() {
               <ImagePlaceholder fill zoomOnHover label="ภาพรถขนส่ง / การจัดส่งสินค้า" className="min-h-[320px]" />
             )}
           </div>
-          <div className="min-w-[300px] flex-1 basis-[380px] flex flex-col justify-center gap-[13.2px]">
+          <div className="min-w-[300px] flex-1 basis-[380px] flex flex-col justify-center gap-[13.2px] py-[35.2px]">
             <Tag variant="forest" className="self-start">
               บริการจัดส่ง
             </Tag>
