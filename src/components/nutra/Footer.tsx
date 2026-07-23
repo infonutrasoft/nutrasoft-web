@@ -9,6 +9,7 @@ const menuLinks = [
   { href: '/', label: 'หน้าแรก' },
   { href: '/products', label: 'สินค้า' },
   { href: '/problems', label: 'ปัญหาและการแก้ไข' },
+  { href: '/contact', label: 'ติดต่อเรา' },
 ]
 
 const phoneNumbers = [

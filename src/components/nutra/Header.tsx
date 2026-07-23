@@ -8,8 +8,6 @@ import React, { useState } from 'react'
 import { cn } from '@/utilities/ui'
 import { btnPrimary, sectionContainer } from './tokens'
 
-const LINE_URL = 'https://line.me/ti/p/@nutrasoft'
-
 const navItems = [
   { href: '/', label: 'หน้าแรก' },
   { href: '/products', label: 'สินค้า' },
@@ -47,7 +45,7 @@ export const NutraHeader: React.FC = () => {
           })}
         </nav>
 
-        <Link href={LINE_URL} target="_blank" rel="noopener noreferrer" className={cn(btnPrimary, 'ml-auto hidden md:inline-flex')}>
+        <Link href="/contact" className={cn(btnPrimary, 'ml-auto hidden md:inline-flex')}>
           ติดต่อเรา
         </Link>
 
@@ -73,12 +71,7 @@ export const NutraHeader: React.FC = () => {
               {item.label}
             </Link>
           ))}
-          <Link
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(btnPrimary, 'mt-[8.8px] w-full')}
-          >
+          <Link href="/contact" onClick={() => setMenuOpen(false)} className={cn(btnPrimary, 'mt-[8.8px] w-full')}>
             ติดต่อเรา
           </Link>
         </div>
