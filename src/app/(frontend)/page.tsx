@@ -126,25 +126,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Video grid */}
-      <section className={cn(sectionContainer, 'py-[35.2px]')}>
-        <div className="mx-auto mb-[26.4px] max-w-[640px] text-center">
-          <Tag variant="forest">วิดีโอแนะนำ</Tag>
-          <h2 className="my-[8.8px] text-[clamp(22px,2.6vw,30px)]">ดูวิธีใช้ NutraSoft ในสวนจริง</h2>
-          <p className="m-0 text-[15px] opacity-80">
-            คลิปสั้นสอนผสมสารและฉีดพ่นให้ถูกวิธี เห็นผลลัพธ์จริงจากสวนทุเรียนที่ใช้ NutraSoft
-          </p>
-        </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-[17.6px]">
-          {videos.map((video) => (
-            <div key={video.id} className="flex flex-col gap-[8.8px]">
-              <VideoCard thumbnail={video.thumbnail} caption={video.caption} videoUrl={video.videoUrl} />
-              <div className="text-sm font-semibold">{video.caption}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Shipping */}
       <section className="bg-nutra-surface py-[35.2px]">
         <div className={cn(sectionContainer, 'flex flex-wrap items-center gap-[26.4px]')}>
@@ -177,6 +158,25 @@ export default async function HomePage() {
               สอบถามค่าจัดส่ง
             </NutraButton>
           </div>
+        </div>
+      </section>
+
+      {/* Video grid */}
+      <section className={cn(sectionContainer, 'py-[35.2px]')}>
+        <div className="mx-auto mb-[26.4px] max-w-[640px] text-center">
+          <Tag variant="forest">วิดีโอแนะนำ</Tag>
+          <h2 className="my-[8.8px] text-[clamp(22px,2.6vw,30px)]">ดูวิธีใช้ NutraSoft ในสวนจริง</h2>
+          <p className="m-0 text-[15px] opacity-80">
+            คลิปสั้นสอนผสมสารและฉีดพ่นให้ถูกวิธี เห็นผลลัพธ์จริงจากสวนทุเรียนที่ใช้ NutraSoft
+          </p>
+        </div>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-[17.6px]">
+          {videos.map((video) => (
+            <div key={video.id} className="flex flex-col gap-[8.8px]">
+              <VideoCard thumbnail={video.thumbnail} caption={video.caption} videoUrl={video.videoUrl} />
+              <div className="text-sm font-semibold">{video.caption}</div>
+            </div>
+          ))}
         </div>
       </section>
     </div>
