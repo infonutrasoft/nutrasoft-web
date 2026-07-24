@@ -40,7 +40,7 @@ export default async function HomePage() {
     payload.find({
       collection: 'products',
       where: { status: { equals: 'published' }, heroProduct: { equals: true } },
-      limit: 3,
+      limit: 6,
       depth: 1,
     }),
     getCachedGlobal('home', 1)(),
@@ -118,7 +118,7 @@ export default async function HomePage() {
               ดูสินค้าทั้งหมด →
             </NutraButton>
           </div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-[17.6px]">
+          <div className="grid grid-cols-1 gap-[17.6px] sm:grid-cols-2 lg:grid-cols-3">
             {heroProducts.docs.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

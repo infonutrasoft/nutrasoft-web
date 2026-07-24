@@ -98,5 +98,8 @@ export const plugins: Plugin[] = [
     // Uploads go straight from the browser to Blob storage instead of through
     // the server route, which on Vercel is capped at a 4.5MB request body.
     clientUploads: true,
+    // Blob storage rejects re-uploading a filename that already exists;
+    // auto-suffixing avoids that collision instead of failing the upload.
+    addRandomSuffix: true,
   }),
 ]
