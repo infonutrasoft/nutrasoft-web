@@ -95,5 +95,8 @@ export const plugins: Plugin[] = [
       media: true,
     },
     token: process.env.BLOB_READ_WRITE_TOKEN,
+    // Uploads go straight from the browser to Blob storage instead of through
+    // the server route, which on Vercel is capped at a 4.5MB request body.
+    clientUploads: true,
   }),
 ]
